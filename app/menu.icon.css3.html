@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/leftarrow.css">
+</head>
+
+<body>
+		<div class="container">
+
+			<button class="icon-toggle-switch icon-toggle-switch-la">
+				<span> left Arrow</span>
+			</button>	
+			
+		</div>
+
+
+
+		<script>
+			(function() {
+
+			  "use strict";
+
+			  var toggles = document.querySelectorAll(".icon-toggle-switch");
+
+			  for (var i = toggles.length - 1; i >= 0; i--) {
+			    var toggle = toggles[i];
+			    toggleHandler(toggle);
+			  };
+
+			  function toggleHandler(toggle) {
+			    toggle.addEventListener( "click", function(e) {
+			      e.preventDefault();
+			      (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
+			    });
+			  }
+
+			})();
+		</script>
+</body>
+</html>

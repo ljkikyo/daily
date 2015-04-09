@@ -1,0 +1,142 @@
+/**
+* @Author 		Nancy
+* @Date 		2015/04/10
+* @description 	A left Arrow  meun icon demo in css
+*/
+
+/* =============================================================================
+  layout
+============================================================================= */
+
+.container {
+
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =============================================================================
+  demo stuff
+============================================================================= */
+
+/**
+ * Toggle Switch Globals
+ *
+ * This class is an overview class that acts as a reset for the icon.
+ */
+
+.icon-toggle-switch{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: 108px;
+	height: 96px;
+	font-size: 0;
+	text-indent: -9999px;
+	-webkit-appearance:none;
+	-moz-apprearance:none;
+	appearance:none;
+	border: none;
+    -webkit-transition: background 0.3s;
+    		transition: background 0.3s;
+
+}
+
+.icon-toggle-switch span {
+  display: block;
+  position: absolute;
+  top: 45px;
+  left: 18px;
+  right: 18px;
+  height: 6px;
+  background: white;
+}
+
+
+
+.icon-toggle-switch span::before,
+.icon-toggle-switch span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #fff;
+  content: "";
+}
+
+.icon-toggle-switch span::before {
+  top: -27px;
+}
+
+.icon-toggle-switch span::after {
+  bottom: -27px;
+}
+
+
+
+
+/**
+ * menu transforms to a left-pointing arrow.
+ */
+
+.icon-toggle-switch-la {
+	 background-color: #32dc64;
+}
+
+
+.icon-toggle-switch-la span {
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.icon-toggle-switch-la span::before {
+  -webkit-transform-origin: top right;
+      -ms-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transition: -webkit-transform 0.3s, width 0.3s, top 0.3s;
+          transition: transform 0.3s, width 0.3s, top 0.3s;
+}
+
+
+.icon-toggle-switch-la span::after {
+  -webkit-transform-origin: bottom right; /* 100% 100%*/
+      -ms-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.3s, width 0.3s, bottom 0.3s;
+          transition: transform 0.3s, width 0.3s, bottom 0.3s;
+}
+
+/* active state, i.e. menu open */
+.icon-toggle-switch-la.active {
+  background-color: #18903c;
+}
+
+.icon-toggle-switch-la.active span {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.icon-toggle-switch-la.active span::before,
+.icon-toggle-switch-la.active span::after {
+  width: 50%;
+}
+
+
+.icon-toggle-switch-la.active span::before {
+  top: 0;
+  -webkit-transform: translateX(42px) translateY(3px) rotate(45deg);
+      -ms-transform: translateX(42px) translateY(3px) rotate(45deg);
+          transform: translateX(42px) translateY(3px) rotate(45deg);
+}
+
+
+.icon-toggle-switch-la.active span::after {
+  bottom: 0;
+  -webkit-transform: translateX(42px) translateY(-3px) rotate(-45deg);
+      -ms-transform: translateX(42px) translateY(-3px) rotate(-45deg);
+          transform: translateX(42px) translateY(-3px) rotate(-45deg);
+}
+
