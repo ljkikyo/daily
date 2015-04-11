@@ -1,2 +1,3 @@
 # daily
-every day
+
+daily records for work
